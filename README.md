@@ -47,5 +47,6 @@
 ## ERD
 
 ## 트러블 슈팅
+[go to the trouble shooting section](https://github.com/hg051510/CommerceProject/blob/main/doc/TROUBLE_SHOOTING.md)
 
 ## 기술 스택
