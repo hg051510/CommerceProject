@@ -46,6 +46,7 @@
   * 리뷰는 작성자 닉네임, 제목, 내용, 별점으로 이루어져 있다.
  
 ## ERD
+![db 설계](https://github.com/hg051510/CommerceProject/assets/81662934/a80ddfbe-5381-4e32-8764-ac6758f6e47c)
 
 ## 트러블 슈팅
 [go to the trouble shooting section](https://github.com/hg051510/CommerceProject/blob/main/doc/TROUBLE_SHOOTING.md)
