@@ -38,6 +38,8 @@
   * 회원, 비회원 모두 리뷰 목록을 조회할 수 있다.
   * 로그인한 회원만 다른 회원의 리뷰에 평가를 남길 수 있다. (도움이 됨, 도움이 되지 않음)
   * 리뷰는 도움이 됨 개수가 많은 리뷰 순으로 보여준다.
+  * 도움이 됨과 도움이 되지 않음 평가는 버튼 형식으로 둘 중 하나를 누르게 되면 해당 숫자가 올라가는 형식이다.
+  * 하나의 리뷰에 도움이 됨/도움이 되지 않음 중 하나의 평가만 할 수 있고, 한 번만 평가 할 수 있다.
   * 도움이 됨 개수가 같으면 최신 리뷰가 먼저 나오게 된다.
   * 작성자 닉네임, 별점, 제목, 내용을 보여준다.
  
@@ -46,7 +48,7 @@
   * 리뷰는 작성자 닉네임, 제목, 내용, 별점으로 이루어져 있다.
  
 ## ERD
-![db 설계](https://github.com/hg051510/CommerceProject/assets/81662934/a80ddfbe-5381-4e32-8764-ac6758f6e47c)
+![db 설계 수정](https://github.com/hg051510/CommerceProject/assets/81662934/95241645-1120-4ba3-8a63-b40ac6468ec2)
 
 ## 트러블 슈팅
 [go to the trouble shooting section](https://github.com/hg051510/CommerceProject/blob/main/doc/TROUBLE_SHOOTING.md)
