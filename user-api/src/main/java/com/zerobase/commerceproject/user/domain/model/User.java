@@ -2,10 +2,12 @@ package com.zerobase.commerceproject.user.domain.model;
 
 import com.sun.istack.NotNull;
 import com.zerobase.commerceproject.user.domain.form.SignUpForm;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.envers.AuditOverride;
 
 import javax.persistence.*;
@@ -14,6 +16,7 @@ import java.util.Locale;
 
 @Entity
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -42,6 +45,8 @@ public class User extends BaseEntity {
 
   private LocalDate birth;
   private boolean verify;
+  private LocalDateTime verifyExpiredAt;
+  private String verificationCode;
 
   @NotNull
   private String role;

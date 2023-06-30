@@ -29,10 +29,19 @@ class SignUpServiceTest {
         .build();
     // when
     User user = service.signUp(form);
+    SignUpForm form1 = SignUpForm.builder()
+        .name("다른 사람")
+        .email("test@test.com")
+        .password("1234")
+        .nickname("1")
+        .birth(LocalDate.now())
+        .role("구매자")
+        .build();
+
+    User user1 = service.signUp(form1);
 
     // then
     assertNotNull(user.getId());
     assertNotNull(user.getCreatedAt());
   }
-
 }
