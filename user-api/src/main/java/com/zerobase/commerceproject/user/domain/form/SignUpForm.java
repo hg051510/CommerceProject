@@ -1,4 +1,4 @@
-package com.zerobase.commerce_project.user.domain.form;
+package com.zerobase.commerceproject.user.domain.form;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,10 +12,11 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SignUpForm {
-    private String email;
-    private String name;
-    private String nickname;
-    private String password;
-    private LocalDate birth;
-    private String role;
+
+  private String email;
+  private String name;
+  private String nickname;
+  private String password;
+  private LocalDate birth;
+  private String role;
 }

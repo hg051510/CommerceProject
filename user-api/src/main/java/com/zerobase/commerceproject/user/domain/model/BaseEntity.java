@@ -1,4 +1,4 @@
-package com.zerobase.commerce_project.user.domain.model;
+package com.zerobase.commerceproject.user.domain.model;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,8 +13,9 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @EntityListeners(value = {AuditingEntityListener.class})
 public abstract class BaseEntity {
-    @CreatedDate
-    private LocalDateTime createdAt;
-    @LastModifiedDate
-    private LocalDateTime modifiedAt;
+
+  @CreatedDate
+  private LocalDateTime createdAt;
+  @LastModifiedDate
+  private LocalDateTime modifiedAt;
 }

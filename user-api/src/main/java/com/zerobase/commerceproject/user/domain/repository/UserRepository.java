@@ -1,6 +1,6 @@
-package com.zerobase.commerce_project.user.domain.repository;
+package com.zerobase.commerceproject.user.domain.repository;
 
-import com.zerobase.commerce_project.user.domain.model.User;
+import com.zerobase.commerceproject.user.domain.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
