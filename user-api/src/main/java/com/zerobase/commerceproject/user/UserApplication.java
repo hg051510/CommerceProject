@@ -1,13 +1,15 @@
 package com.zerobase.commerceproject.user;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@EnableJpaAuditing
 @EnableFeignClients
+@RequiredArgsConstructor
+@EnableJpaAuditing
 @EnableJpaRepositories
 @SpringBootApplication
 public class UserApplication {
