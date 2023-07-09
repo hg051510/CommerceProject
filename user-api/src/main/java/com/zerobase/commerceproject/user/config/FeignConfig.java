@@ -8,13 +8,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class FeignConfig {
+    @Value("${mailgun.key}")
+    private String mailgunKey;
 
-  @Value("${mailgun.key}")
-  private String mailgunKey;
-
-  @Bean
-  @Qualifier(value = "mailgun")
-  public BasicAuthRequestInterceptor basicAuthRequestInterceptor() {
-    return new BasicAuthRequestInterceptor("api", mailgunKey);
-  }
+    @Bean
+    @Qualifier(value = "mailgun")
+    public BasicAuthRequestInterceptor basicAuthRequestInterceptor(){
+        return new BasicAuthRequestInterceptor("api", mailgunKey);
+    }
 }

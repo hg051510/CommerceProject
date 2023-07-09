@@ -15,16 +15,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/signup")
 @RequiredArgsConstructor
 public class SignUpController {
-
   private final SignUpApplication signUpApplication;
 
   @PostMapping
-  public ResponseEntity<String> userSignUp(@RequestBody SignUpForm form) {
+  public ResponseEntity<String> userSignUp(@RequestBody SignUpForm form){
     return ResponseEntity.ok(signUpApplication.userSignUp(form));
   }
 
   @GetMapping("/verify")
-  public ResponseEntity<String> verifyUser(String email, String code) {
+  public ResponseEntity<String> verifyUser(String email, String code){
     signUpApplication.userVerify(email, code);
     return ResponseEntity.ok("인증이 완료되었습니다.");
   }

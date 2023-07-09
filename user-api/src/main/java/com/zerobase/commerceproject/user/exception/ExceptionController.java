@@ -11,19 +11,16 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 @Slf4j
 public class ExceptionController {
-
   @ExceptionHandler({CustomException.class})
-  public ResponseEntity<ExceptionResponse> customeRequestException(final CustomException c) {
+  public ResponseEntity<ExceptionResponse> customeRequestException(final CustomException c){
     log.warn("api Exception : {}", c.getErrorCode());
-    return ResponseEntity.badRequest()
-        .body(new ExceptionResponse(c.getMessage(), c.getErrorCode()));
+    return ResponseEntity.badRequest().body(new ExceptionResponse(c.getMessage(), c.getErrorCode()));
   }
 
   @Getter
   @ToString
   @AllArgsConstructor
-  public static class ExceptionResponse {
-
+  public static class ExceptionResponse{
     private String message;
     private ErrorCode errorCode;
   }
