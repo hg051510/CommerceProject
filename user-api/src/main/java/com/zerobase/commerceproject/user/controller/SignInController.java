@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/signin")
 @RequiredArgsConstructor
 public class SignInController {
+
   private final SignInApplication signInApplication;
 
   @PostMapping
-  public ResponseEntity<String> signInUser(@RequestBody SignInForm form){
+  public ResponseEntity<String> signInUser(@RequestBody SignInForm form) {
     return ResponseEntity.ok(signInApplication.userLoginToken(form));
   }
 
