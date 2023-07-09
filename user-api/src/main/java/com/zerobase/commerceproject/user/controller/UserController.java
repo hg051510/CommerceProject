@@ -23,7 +23,7 @@ public class UserController {
   private final UserService userService;
 
   @GetMapping("/getInfo")
-  public ResponseEntity<UserDto> getInfo(@RequestHeader(name = "X-AUTH-TOKEN") String token){
+  public ResponseEntity<UserDto> getInfo(@RequestHeader(name = "X-AUTH-TOKEN") String token) {
     UserVo vo = provider.getUserVo(token);
     User u = userService.findByIdAndEmail(vo.getId(), vo.getEmail()).orElseThrow(
         () -> new CustomException(ErrorCode.NOT_FOUNT_USER));

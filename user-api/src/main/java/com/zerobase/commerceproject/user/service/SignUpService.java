@@ -26,7 +26,7 @@ public class SignUpService {
     return userRepository.findByEmail(email.toLowerCase(Locale.ROOT)).isPresent();
   }
 
-  public boolean isNicknameExist(String nickname){
+  public boolean isNicknameExist(String nickname) {
     return userRepository.findByNickname(nickname).isPresent();
   }
 
@@ -34,7 +34,7 @@ public class SignUpService {
   public void verifyEmail(String email, String code) {
     User user = userRepository.findByEmail(email.toLowerCase(Locale.ROOT))
         .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUNT_USER));
-    if(user.isVerify()){
+    if (user.isVerify()) {
       throw new CustomException(ErrorCode.ALREADY_VERIFY);
     } else if (!user.getVerificationCode().equals(code)) {
       throw new CustomException(ErrorCode.WRONG_VERIFICATION);
@@ -46,10 +46,10 @@ public class SignUpService {
   }
 
   @Transactional
-  public LocalDateTime changeUserValidationEmail(Long userId, String verificationCode){
+  public LocalDateTime changeUserValidationEmail(Long userId, String verificationCode) {
     Optional<User> userOptional = userRepository.findById(userId);
 
-    if(userOptional.isPresent()){
+    if (userOptional.isPresent()) {
       User user = userOptional.get();
       user.setVerificationCode(verificationCode);
       user.setVerifyExpiredAt(LocalDateTime.now().plusDays(7));
