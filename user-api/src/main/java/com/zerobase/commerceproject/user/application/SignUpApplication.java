@@ -43,14 +43,14 @@ public class SignUpApplication {
     }
   }
 
-  public String getRandomCode(){
+  public String getRandomCode() {
     return RandomStringUtils.random(10, true, true);
   }
 
-  public String getVerificationEmailBody(String email, String name, String code){
+  public String getVerificationEmailBody(String email, String name, String code) {
     StringBuilder sb = new StringBuilder();
     return sb.append("Hello").append(name).append("! Please Click Link for verification. \n\n")
-        .append("http://localhost:8081/signup/verify/user?email=")
+        .append("http://localhost:8081/signup/verify/?email=")
         .append(email)
         .append("&code=")
         .append(code).toString();

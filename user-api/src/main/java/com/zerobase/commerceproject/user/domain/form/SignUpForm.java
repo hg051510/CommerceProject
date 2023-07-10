@@ -1,5 +1,6 @@
 package com.zerobase.commerceproject.user.domain.form;
 
+import com.zerobase.core.domain.UserType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,5 +19,5 @@ public class SignUpForm {
   private String nickname;
   private String password;
   private LocalDate birth;
-  private String role;
+  private UserType type;
 }

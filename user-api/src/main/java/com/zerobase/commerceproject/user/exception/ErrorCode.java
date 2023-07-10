@@ -12,8 +12,8 @@ public enum ErrorCode {
   WRONG_VERIFICATION(HttpStatus.BAD_REQUEST, "잘못된 인증코드 입니다."),
   EXPIRED_CODE(HttpStatus.BAD_REQUEST, "인증시간이 만료되었습니다."),
   ALREADY_REGISTERED_EMAIL(HttpStatus.BAD_REQUEST, "이미 등록된 이메일입니다."),
-  ALREADY_REGISTERED_NICKNAME(HttpStatus.BAD_REQUEST, "이미 등록된 닉네임입니다.")
-  ;
+  ALREADY_REGISTERED_NICKNAME(HttpStatus.BAD_REQUEST, "이미 등록된 닉네임입니다."),
+  LOGIN_CHECK_FAIL(HttpStatus.BAD_REQUEST, "아이디나 패스워드를 확인해 주세요.");
 
   private final HttpStatus httpStatus;
   private final String detail;

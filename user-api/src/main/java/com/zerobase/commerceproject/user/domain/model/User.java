@@ -2,6 +2,7 @@ package com.zerobase.commerceproject.user.domain.model;
 
 import com.sun.istack.NotNull;
 import com.zerobase.commerceproject.user.domain.form.SignUpForm;
+import com.zerobase.core.domain.UserType;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -49,7 +50,9 @@ public class User extends BaseEntity {
   private String verificationCode;
 
   @NotNull
-  private String role;
+  @Enumerated(value = EnumType.STRING)
+  @Column(name = "type")
+  private UserType type;
 
   public static User from(SignUpForm form) {
     return User.builder()
@@ -59,7 +62,7 @@ public class User extends BaseEntity {
         .nickname(form.getNickname())
         .birth(form.getBirth())
         .verify(false)
-        .role(form.getRole())
+        .type(form.getType())
         .build();
   }
 }

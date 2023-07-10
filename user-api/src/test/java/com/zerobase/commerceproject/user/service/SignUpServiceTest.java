@@ -2,6 +2,7 @@ package com.zerobase.commerceproject.user.service;
 
 import com.zerobase.commerceproject.user.domain.form.SignUpForm;
 import com.zerobase.commerceproject.user.domain.model.User;
+import com.zerobase.core.domain.UserType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,7 +26,7 @@ class SignUpServiceTest {
         .password("1234")
         .nickname("테스트")
         .birth(LocalDate.now())
-        .role("구매자")
+        .type(UserType.valueOf("CUSTOMER"))
         .build();
     // when
     User user = service.signUp(form);
@@ -35,7 +36,7 @@ class SignUpServiceTest {
         .password("1234")
         .nickname("1")
         .birth(LocalDate.now())
-        .role("구매자")
+        .type(UserType.valueOf("CUSTOMER"))
         .build();
 
     User user1 = service.signUp(form1);
